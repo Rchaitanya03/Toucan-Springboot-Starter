@@ -55,7 +55,7 @@ CANCELLED -->not allowed
 Transaction not allowed:
 PENDING  --> PENDING
 
-An invalid status transition returns `409 Conflict`.
+An invalid status transition returns (409 Conflict).
 
 ## API Endpoints
 
@@ -75,7 +75,7 @@ Example request:
 }
 
 
-A successful request returns `201 Created`.
+A successful request returns (201 Created).
 
 The initial status is automatically set to `PENDING`.
 
@@ -93,7 +93,7 @@ GET /api/transactions/TXN001
 
 Returns `200 OK` when the transaction exists.
 
-If the transaction does not exist, the API returns `404 Not Found`.
+If the transaction does not exist, the API returns (404 Not Found).
 
 ### 3. Update Transaction Status
 
@@ -108,9 +108,9 @@ Example request:
 }
 
 
-A successful update returns `200 OK`.
+A successful update returns (200 OK).
 
-Only transactions currently in `PENDING` status can be updated.
+Only transactions currently in {PENDING} status can be updated.
 
 ### 4. Get Customer Transactions
 
@@ -123,7 +123,7 @@ GET /api/transactions/customer/CUS001
 
 Returns all transactions belonging to the specified customer.
 
-If the customer has no transactions, the API returns `200 OK` with an empty array:
+If the customer has no transactions, the API returns (200 OK) with an empty array:
 
 Empty list:
 []
@@ -134,12 +134,12 @@ The API uses appropriate HTTP status codes:
 
 Situation:                     HTTP Status:
 
-Successful creation             `201 Created` 
-Successful retrieval/update          `200 OK` 
-Invalid input               `400 Bad Request` 
-Transaction not found         `404 Not Found` 
-Duplicate Transaction ID        `409 Conflict` 
-Invalid status transition      `409 Conflict` 
+Successful creation             (201 Created) 
+Successful retrieval/update          (200 OK)
+Invalid input               (400 Bad Request)
+Transaction not found         (404 Not Found) 
+Duplicate Transaction ID        (409 Conflict) 
+Invalid status transition      (409 Conflict)
 
 A global exception handler is used to return clear error messages instead of exposing generic server errors.
 
