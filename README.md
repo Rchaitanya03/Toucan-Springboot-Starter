@@ -61,9 +61,8 @@ An invalid status transition returns `409 Conflict`.
 
 ### 1. Create Transaction
 
-```http
 POST /api/transactions
-```
+
 Example request:
 
 ```json
@@ -201,7 +200,7 @@ The application separates responsibilities into controller, service, repository,
 # AI  USAGE DISCLOSURE:
 - AI was used for debugging and test-case design during the project.
 - The generated suggestions were reviewed and implemented where appropriate.
-- The final implementation was tested to verify that it works as expected.
+- Given suggestions regarding API Endpoints
 
 
 # Test Run Output:
