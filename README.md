@@ -65,7 +65,7 @@ POST /api/transactions
 
 Example request:
 
-```json
+
 {
   "transactionId": "TXN001",
   "customerId": "CUS001",
@@ -73,7 +73,7 @@ Example request:
   "currency": "INR",
   "transactionType": "PAYMENT"
 }
-```
+
 
 A successful request returns `201 Created`.
 
@@ -81,15 +81,15 @@ The initial status is automatically set to `PENDING`.
 
 ### 2. Get Transaction
 
-```http
+
 GET /api/transactions/{transactionId}
-```
+
 
 Example:
 
-```http
+
 GET /api/transactions/TXN001
-```
+
 
 Returns `200 OK` when the transaction exists.
 
@@ -97,17 +97,16 @@ If the transaction does not exist, the API returns `404 Not Found`.
 
 ### 3. Update Transaction Status
 
-```http
 PATCH /api/transactions/{transactionId}/status
-```
+
 
 Example request:
 
-```json
+
 {
   "status": "COMPLETED"
 }
-```
+
 
 A successful update returns `200 OK`.
 
@@ -115,23 +114,19 @@ Only transactions currently in `PENDING` status can be updated.
 
 ### 4. Get Customer Transactions
 
-```http
+
 GET /api/transactions/customer/{customerId}
-```
 
 Example:
 
-```http
 GET /api/transactions/customer/CUS001
-```
 
 Returns all transactions belonging to the specified customer.
 
 If the customer has no transactions, the API returns `200 OK` with an empty array:
 
-```json
+Empty list:
 []
-```
 
 ## Error Handling
 
@@ -200,7 +195,7 @@ The application separates responsibilities into controller, service, repository,
 # AI  USAGE DISCLOSURE:
 - AI was used for debugging and test-case design during the project.
 - The generated suggestions were reviewed and implemented where appropriate.
-- Given suggestions regarding API Endpoints
+- Suggestions were generated regarding API's.
 
 
 # Test Run Output:
